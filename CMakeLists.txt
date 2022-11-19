@@ -1,6 +1,8 @@
-cmake_minimum_required(VERSION 3.23)
-project(myLogger)
+cmake_minimum_required(VERSION 3.15)
+project(logger CXX)
 
-set(CMAKE_CXX_STANDARD 11)
+add_library(logger src/logger.cpp)
+target_include_directories(logger PUBLIC include)
 
-add_library(myLogger Logger.cpp)
+set_target_properties(logger PROPERTIES PUBLIC_HEADER "include/logger.h")
+install(TARGETS logger)
