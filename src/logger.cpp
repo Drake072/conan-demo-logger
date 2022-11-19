@@ -2,6 +2,6 @@
 
 #include <iostream>
 
-void info(std::string msg) {
+void info(const std::string& msg) {
     std::cout << "LOGGER [" <<+ LOGGER_VERSION << "]: " << msg << std::endl;
 }

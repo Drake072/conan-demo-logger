@@ -6,6 +6,6 @@
 
 #define LOGGER_VERSION "V1"
 
-void info(std::string);
+void info(const std::string&);
 
 #endif //CONAN_DEMO_LOGGER_LOGGER_H
