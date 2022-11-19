@@ -2,7 +2,7 @@
 
 ### Create conan recipe if not created
 
-`conan new logger/1.0 --template-cmake_lib`
+`conan new logger/1.0 --template=cmake_lib`
 
 ### Build and install to local cache
 
