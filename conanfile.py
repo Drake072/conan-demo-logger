@@ -19,16 +19,14 @@ class LoggerConan(ConanFile):
     default_options = {"shared": False, "fPIC": True}
 
     # Sources are located in the same place as this recipe, copy them to the recipe
-    exports_sources = "CMakeLists.txt", "src/*", "include/*"
-
-    generators = "cmake_find_package"
+    exports_sources = "src/CMakeLists.txt", "src/logger.cpp", "src/include/logger.h"
 
     def config_options(self):
         if self.settings.os == "Windows":
             del self.options.fPIC
 
     def layout(self):
-        cmake_layout(self)
+        cmake_layout(self, src_folder="src")
 
     def generate(self):
         tc = CMakeToolchain(self)
